@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  # Unique key of the Deployment instance
+  name: my-app
+spec:
+  # 3 Pods should exist at all times.
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        # Apply this label to pods and default
+        # the Deployment label selector to this value
+        app: my-app
+    spec:
+      containers:
+      - name: auth-contaier
+        # Run this image
+        image: shivamsingh6120/auth_repo:3.0

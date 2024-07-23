@@ -1,0 +1,6 @@
+Flask
+Flask-SQLAlchemy
+PyJWT
+psycopg2-binary
+setuptools
+git+https://github.com/shivamsi0006/my_database_lib.git
